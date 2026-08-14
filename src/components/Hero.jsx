@@ -101,7 +101,7 @@ export default function Hero() {
       </div>
 
       <div
-        className="section-container"
+        className="section-container hero-inner"
         style={{
           width: '100%',
           display: 'flex',
@@ -112,7 +112,7 @@ export default function Hero() {
         }}
       >
         {/* Left: Text */}
-        <div style={{ flex: '1', minWidth: '300px', maxWidth: '580px' }}>
+        <div className="hero-text" style={{ flex: '1', minWidth: '300px', maxWidth: '580px' }}>
           <motion.div {...fadeUp(0.1)}>
             <span className="tag tag-primary" style={{ marginBottom: '20px', display: 'inline-block' }}>
               👋 Welcome to my portfolio
@@ -162,6 +162,7 @@ export default function Hero() {
 
           <motion.div
             {...fadeUp(0.5)}
+            className="hero-buttons"
             style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginBottom: '44px' }}
           >
             <Link to="projects" smooth duration={600} offset={-68}>
@@ -176,6 +177,7 @@ export default function Hero() {
 
           <motion.div
             {...fadeUp(0.6)}
+            className="hero-socials"
             style={{ display: 'flex', gap: '16px', alignItems: 'center' }}
           >
             <span style={{ color: '#64748b', fontSize: '0.85rem' }}>Find me on</span>
@@ -211,7 +213,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           style={{ flex: '0 0 auto', position: 'relative' }}
         >
-          <div style={{ position: 'relative', width: 300, height: 300 }}>
+          <div className="hero-image-wrap" style={{ position: 'relative', width: 300, height: 300 }}>
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}

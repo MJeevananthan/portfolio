@@ -168,3 +168,146 @@ body {
 section {
   padding: 100px 0;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .section-container {
+    padding: 0 16px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 36px;
+    font-size: 0.92rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 56px 0;
+  }
+
+  .section-container {
+    padding: 0 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+/* Hero mobile */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 36px !important;
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .hero-text {
+    max-width: 100% !important;
+    align-items: center !important;
+  }
+
+  .hero-image-wrap {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .hero-socials {
+    justify-content: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image-wrap {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
+/* About mobile */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Skills mobile */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Projects mobile */
+@media (max-width: 640px) {
+  .project-accent-bar {
+    display: none !important;
+  }
+}
+
+/* Experience mobile */
+@media (max-width: 640px) {
+  .timeline-container {
+    padding-left: 44px !important;
+  }
+
+  .timeline-line {
+    left: 16px !important;
+  }
+
+  .timeline-dot {
+    left: -34px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* Contact mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column !important;
+  }
+}
+
+/* Certifications mobile */
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Navbar mobile badge float fix */
+@media (max-width: 380px) {
+  .badge-right {
+    right: -8px !important;
+  }
+  .badge-left {
+    left: -8px !important;
+  }
+}

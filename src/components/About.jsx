@@ -16,7 +16,7 @@ const fadeInRight = {
 }
 
 const stats = [
-  { value: '8.3', label: 'CGPA', icon: '🎓' },
+  { value: '8.1', label: 'CGPA', icon: '🎓' },
   { value: '2+', label: 'Projects', icon: '🚀' },
   { value: '2', label: 'Internships', icon: '💼' },
   { value: '5+', label: 'Certifications', icon: '🏆' },
@@ -140,7 +140,7 @@ export default function About() {
                     degree: 'B.Tech - AI & Data Science',
                     school: 'RVS College of Engineering and Technology',
                     year: '2023 – 2027',
-                    score: 'CGPA: 8.3',
+                    score: 'CGPA: 8.1',
                     tag: 'Current',
                   },
                   {

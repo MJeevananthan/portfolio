@@ -81,7 +81,7 @@ export default function Navbar() {
           </Link>
         ))}
         <a
-          href="/Jeevananthan_M_Resume_Updated.pdf"
+          href={`${import.meta.env.BASE_URL}Jeevananthan_M_Resume_Updated.pdf`}
           download
           className="btn-primary"
           style={{ padding: '8px 20px', fontSize: '0.85rem', marginLeft: '8px' }}

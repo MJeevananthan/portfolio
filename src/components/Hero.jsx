@@ -227,7 +227,7 @@ export default function Hero() {
               background: 'var(--bg-dark)',
             }} />
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Jeevananthan M"
               style={{
                 position: 'relative',

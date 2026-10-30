@@ -20,8 +20,8 @@ const contactInfo = [
   {
     icon: <FaMapMarkerAlt size={20} />,
     label: 'Location',
-    value: 'Coimbatore, Tamil Nadu, India',
-    href: 'https://maps.google.com?q=Coimbatore,Tamil+Nadu,India',
+    value: 'Theni, Tamil Nadu, India',
+    href: 'https://maps.google.com?q=Theni,Tamil+Nadu,India',
     color: '#f59e0b',
   },
   {

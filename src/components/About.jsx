@@ -25,7 +25,7 @@ const stats = [
 const details = [
   { icon: <FaUser size={14} />, label: 'Name', value: 'Jeevananthan M' },
   { icon: <FaCalendar size={14} />, label: 'DOB', value: '14 September 2005' },
-  { icon: <FaMapMarkerAlt size={14} />, label: 'Location', value: 'Coimbatore, Tamil Nadu' },
+  { icon: <FaMapMarkerAlt size={14} />, label: 'Location', value: 'Theni, Tamil Nadu' },
   { icon: <FaHeart size={14} />, label: 'Hobbies', value: 'Music & Building Projects' },
   { icon: <FaCode size={14} />, label: 'Languages', value: 'Tamil, English' },
 ]

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { FaUser, FaCalendar, FaMapMarkerAlt, FaHeart, FaCode } from 'react-icons/fa'
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -50 },
@@ -20,14 +19,6 @@ const stats = [
   { value: '2+', label: 'Projects', icon: '🚀' },
   { value: '2', label: 'Internships', icon: '💼' },
   { value: '5+', label: 'Certifications', icon: '🏆' },
-]
-
-const details = [
-  { icon: <FaUser size={14} />, label: 'Name', value: 'Jeevananthan M' },
-  { icon: <FaCalendar size={14} />, label: 'DOB', value: '14 September 2005' },
-  { icon: <FaMapMarkerAlt size={14} />, label: 'Location', value: 'Theni, Tamil Nadu' },
-  { icon: <FaHeart size={14} />, label: 'Hobbies', value: 'Music & Building Projects' },
-  { icon: <FaCode size={14} />, label: 'Languages', value: 'Tamil, English' },
 ]
 
 export default function About() {
@@ -69,30 +60,6 @@ export default function About() {
               </p>
             </div>
 
-            <div className="card" style={{ marginTop: '20px' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '20px', color: '#f1f5f9' }}>
-                Personal Details
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                {details.map((d) => (
-                  <div key={d.label} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{
-                      width: 32, height: 32, borderRadius: '8px',
-                      background: 'rgba(99,102,241,0.1)',
-                      border: '1px solid rgba(99,102,241,0.2)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: '#818cf8', flexShrink: 0,
-                    }}>
-                      {d.icon}
-                    </div>
-                    <div>
-                      <span style={{ color: '#64748b', fontSize: '0.75rem', display: 'block' }}>{d.label}</span>
-                      <span style={{ color: '#f1f5f9', fontSize: '0.9rem', fontWeight: 500 }}>{d.value}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Stats + Education */}

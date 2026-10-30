@@ -1,6 +1,23 @@
 import { motion } from 'framer-motion'
 import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa'
 
+const internshipCerts = [
+  {
+    title: 'Internship Completion Certificate',
+    issuer: 'One Yes Infotech',
+    icon: '🤖',
+    color: '#6366f1',
+    description: 'Successfully completed Artificial Intelligence Internship — covered ML models, Generative AI, LLMs, and Prompt Engineering.',
+  },
+  {
+    title: 'Internship Completion Certificate',
+    issuer: 'Elysium Private Limited',
+    icon: '💻',
+    color: '#06b6d4',
+    description: 'Successfully completed Full Stack Development Internship — covered HTML, CSS, JavaScript, Flask, MySQL, and MongoDB.',
+  },
+]
+
 const certs = [
   {
     title: 'Google AI Essentials',
@@ -121,6 +138,97 @@ export default function Certifications() {
             </motion.div>
           ))}
         </div>
+
+        {/* Internship Completion Certificates */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          style={{ marginTop: '60px' }}
+        >
+          <h3 style={{
+            fontSize: '1.2rem', fontWeight: 700, color: '#f1f5f9',
+            marginBottom: '24px', textAlign: 'center',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+          }}>
+            <span style={{
+              display: 'inline-block', width: 32, height: 2,
+              background: 'linear-gradient(90deg, transparent, #6366f1)',
+              borderRadius: '2px',
+            }} />
+            🏢 Internship Completion Certificates
+            <span style={{
+              display: 'inline-block', width: 32, height: 2,
+              background: 'linear-gradient(90deg, #06b6d4, transparent)',
+              borderRadius: '2px',
+            }} />
+          </h3>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+            {internshipCerts.map((cert, i) => (
+              <motion.div
+                key={cert.issuer}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                whileHover={{ y: -6, boxShadow: `0 20px 40px ${cert.color}18` }}
+                style={{
+                  background: 'var(--bg-card)',
+                  border: `1px solid ${cert.color}30`,
+                  borderRadius: '20px',
+                  padding: '28px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  cursor: 'default',
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                <div style={{
+                  position: 'absolute', top: 0, left: 0, right: 0, height: '3px',
+                  background: `linear-gradient(90deg, ${cert.color}, transparent)`,
+                }} />
+                <div style={{
+                  position: 'absolute', top: -30, right: -30, width: 120, height: 120,
+                  borderRadius: '50%',
+                  background: `radial-gradient(circle, ${cert.color}10 0%, transparent 70%)`,
+                  pointerEvents: 'none',
+                }} />
+
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px', marginBottom: '16px' }}>
+                  <div style={{
+                    width: 48, height: 48, borderRadius: '14px',
+                    background: `${cert.color}18`,
+                    border: `1px solid ${cert.color}30`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '1.5rem', flexShrink: 0,
+                  }}>
+                    {cert.icon}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f1f5f9', lineHeight: 1.4, marginBottom: '4px' }}>
+                      {cert.title}
+                    </h3>
+                    <span style={{ color: cert.color, fontSize: '0.8rem', fontWeight: 600 }}>
+                      {cert.issuer}
+                    </span>
+                  </div>
+                </div>
+
+                <p style={{ color: '#94a3b8', fontSize: '0.85rem', lineHeight: 1.6 }}>
+                  {cert.description}
+                </p>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '16px' }}>
+                  <FaCertificate size={12} style={{ color: cert.color }} />
+                  <span style={{ color: '#64748b', fontSize: '0.75rem' }}>Internship Completion</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
   )
